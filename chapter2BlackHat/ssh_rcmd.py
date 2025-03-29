@@ -3,7 +3,7 @@ import shlex
 import subprocess 
 def ssh_command(ip, port, user, passwd, command):
  client = paramiko.SSHClient() 
- client.set_missing_host_key_policy(paramiko.AutoAddPolicy()) 
+ client.set_missing_host_key_policy(paramiko.AutoAddPolicy()) #accepts the unknown ssh hostkeys
  client.connect(ip, port=port, username=user, password=passwd)
  ssh_session = client.get_transport().open_session() #get_transport()->retrives a session in transport layer which is responsible for communication open_session()->creates a new session
  if ssh_session.active: 
