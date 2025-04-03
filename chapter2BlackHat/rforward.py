@@ -156,7 +156,7 @@ def main():
     password = None
     if options.readpass:
         password = getpass.getpass("Enter SSH password: ")
-    client = paramiko.SSHClient()
+    client = paramiko.SSHClient() #the client object
     client.load_system_host_keys() #loads ssh host key from systems default know hosts file
     client.set_missing_host_key_policy(paramiko.WarningPolicy())
     verbose("Connecting to ssh host %s:%d ..." % (server[0], server[1]))
@@ -185,3 +185,4 @@ def main():
         sys.exit(0)
 if __name__ == "__main__":
     main()
+    
