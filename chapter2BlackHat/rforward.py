@@ -1,6 +1,5 @@
 """
 Sample script showing how to do remote port forwarding over paramiko.
-
 This script connects to the requested SSH server and sets up remote port
 forwarding (the openssh -R option) from a remote port through a tunneled
 connection to a destination reachable from the local machine.
