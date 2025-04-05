@@ -1,7 +1,7 @@
 import socket
 import os
 # host to listen on
-host = ""
+host = "" #add your ip here 
 def main():
 # create a raw socket and bind it to the public interface
  if os.name == "nt":#windows
