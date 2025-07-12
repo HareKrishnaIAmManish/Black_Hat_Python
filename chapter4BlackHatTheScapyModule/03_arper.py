@@ -16,7 +16,7 @@ class Arper:
         self.victimmac=get_mac(victim)
         self.gateway=gateway
         self.gatewaymac=get_mac(gateway)
-        self.interface=interface
+        conf.interface=interface
         conf.verb=0   #disables Scapy's automatic output/logging — like when it sends or receives packets.
         print(f'Initialized {interface}')
         print(f'Gateway ({gateway}) is at {self.gatewaymac}.')
